@@ -1,8 +1,6 @@
 #!/bin/bash
 
 apt update -y && apt upgrade -y
-apt install python3-pip -y
-pip3 install gdown -y
 
 apt install grub2 wimtools ntfs-3g -y
 
@@ -67,8 +65,8 @@ cd /root/windisk
 
 mkdir winfile
 
-#wget -O win10.iso --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://shorturl.at/LtMcm
-gdown https://drive.google.com/uc?id=1n-AhQZkuGAng0kTgmxFfeCW1Nr40cjW6  #windows.iso di gdrive sintanpangestu
+wget -O win10.iso --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://filebin.net/qg8pfbgjkw2sq5pz/win10.iso
+
 #WIndows server 2019 https://bit.ly/3UGzNcB
 # backup windwos isohttps://shorturl.at/CGkXG
 
@@ -78,8 +76,7 @@ rsync -avz --progress winfile/* /mnt
 
 umount winfile
 
-#wget -O virtio.iso https://bit.ly/4d1g7Ht
-gdown https://drive.google.com/uc?id=12kJLkLi2gaL8UaYvO_HcHVaNCQormt7I
+wget -O virtio.iso https://bit.ly/4d1g7Ht
 
 mount -o loop virtio.iso winfile
 
