@@ -32,8 +32,8 @@ This guide provides step-by-step instructions for installing Windows 10 on a Con
   - `apt install git -y`
   - `git clone https://github.com/NaimMuh/n.git`
   - `cd n`
-  - `chmod +x windows-install.sh`
-  - `./windows-install.sh`
+  - `chmod +x install.sh`
+  - `./install.sh`
   - The process takes approximately 15 minutes and completes when the ssh session disconnects due to the machine rebooting.
 
 ### 3. Connnect to the VPS with VNC to install Windows
