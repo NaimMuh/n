@@ -4,7 +4,6 @@ apt update -y && apt upgrade -y
 
 apt install grub2 wimtools ntfs-3g -y
 
-
 #Get the disk size in GB and convert to MB
 disk_size_gb=$(parted /dev/sda --script print | awk '/^Disk \/dev\/sda:/ {print int($3)}')
 disk_size_mb=$((disk_size_gb * 1024))
@@ -66,8 +65,6 @@ cd /root/windisk
 mkdir winfile
 
 wget -O win10.iso --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://filebin.net/qg8pfbgjkw2sq5pz/win10.iso
-
-#WIndows server 2019 https://bit.ly/3UGzNcB
 # backup windwos isohttps://shorturl.at/CGkXG
 
 mount -o loop win10.iso winfile
@@ -93,5 +90,3 @@ echo 'add virtio /virtio_drivers' >> cmd.txt
 wimlib-imagex update boot.wim 2 < cmd.txt
 
 reboot
-
-
