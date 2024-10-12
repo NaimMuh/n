@@ -78,7 +78,8 @@ rsync -avz --progress winfile/* /mnt
 
 umount winfile
 
-wget -O virtio.iso https://bit.ly/4d1g7Ht
+#wget -O virtio.iso https://bit.ly/4d1g7Ht
+gdown https://drive.google.com/uc?id=12kJLkLi2gaL8UaYvO_HcHVaNCQormt7I
 
 mount -o loop virtio.iso winfile
 
