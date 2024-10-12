@@ -64,29 +64,29 @@ cd /root/windisk
 
 mkdir winfile
 
-#$wget -O win10.iso --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://filebin.net/qg8pfbgjkw2sq5pz/win10.iso
+$wget -O win10.iso  https://filebin.net/qg8pfbgjkw2sq5pz/win10.iso
 # backup windwos isohttps://shorturl.at/CGkXG
 
-#$mount -o loop win10.iso winfile
+$mount -o loop win10.iso winfile
 
-#$rsync -avz --progress winfile/* /mnt
+$rsync -avz --progress winfile/* /mnt
 
-#umount winfile
+umount winfile
 
-#wget -O virtio.iso https://bit.ly/4d1g7Ht
+wget -O virtio.iso https://bit.ly/4d1g7Ht
 
-#mount -o loop virtio.iso winfile
+mount -o loop virtio.iso winfile
 
-#mkdir /mnt/sources/virtio
+mkdir /mnt/sources/virtio
 
-#rsync -avz --progress winfile/* /mnt/sources/virtio
+rsync -avz --progress winfile/* /mnt/sources/virtio
 
-#cd /mnt/sources
+cd /mnt/sources
 
-#touch cmd.txt
+touch cmd.txt
 
-#echo 'add virtio /virtio_drivers' >> cmd.txt
+echo 'add virtio /virtio_drivers' >> cmd.txt
 
-#wimlib-imagex update boot.wim 2 < cmd.txt
+wimlib-imagex update boot.wim 2 < cmd.txt
 
-#reboot
+reboot
