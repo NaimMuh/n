@@ -1,8 +1,11 @@
 #!/bin/bash
 
 apt update -y && apt upgrade -y
+apt install python3-pip
+pip3 install gdown
 
 apt install grub2 wimtools ntfs-3g -y
+
 
 #Get the disk size in GB and convert to MB
 disk_size_gb=$(parted /dev/sda --script print | awk '/^Disk \/dev\/sda:/ {print int($3)}')
@@ -64,7 +67,8 @@ cd /root/windisk
 
 mkdir winfile
 
-wget -O win10.iso --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://shorturl.at/LtMcm
+#wget -O win10.iso --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://shorturl.at/LtMcm
+gdown https://drive.google.com/uc?id=1n-AhQZkuGAng0kTgmxFfeCW1Nr40cjW6  #windows.iso di gdrive sintanpangestu
 #WIndows server 2019 https://bit.ly/3UGzNcB
 # backup windwos isohttps://shorturl.at/CGkXG
 
