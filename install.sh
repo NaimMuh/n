@@ -1,8 +1,8 @@
 #!/bin/bash
 
 apt update -y && apt upgrade -y
-apt install python3-pip
-pip3 install gdown
+apt install python3-pip -y
+pip3 install gdown -y
 
 apt install grub2 wimtools ntfs-3g -y
 
